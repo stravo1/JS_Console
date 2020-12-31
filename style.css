@@ -10,15 +10,28 @@ header{
   justify-content: end;
   width:fit-content;
 }
-#h1 {
-  color: #837DE9F7;
+.h1 {
   text-align:center;
   font-family: Raleway;
 }
+.h1.h1l {
+  color: #837DE9F7;
+}
+.h1.h1d {
+  color: #e3e2fff7;
+}
+
+
 .div {
   font-family: 'Ubuntu Mono';
   font-size: smaller;
   line-height: 1.5;
+}
+#consolel {
+  color:black;
+}
+#consoled {
+  color: white
 }
 #parentDiv {
   display: grid;
@@ -38,54 +51,84 @@ header{
   grid-gap: 0px;
 }
 
-input[type=text] {
-  background-color: whitesmoke;
-  font-family: 'Ubuntu Mono';
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid  #ff7f7ff7;
-}
+
 
 input[type=button] {
   border: 1px solid #454545;
-  color: black;
-  background-color: whitesmoke;
-  padding: 15px 15px
+  padding: 15px 15px;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   font-family: Raleway;
   cursor: pointer;
   border-radius: 4px;
 }
-input[type=button]:hover {
+
+.bttn.bttnl {
+  color: black;
+  background-color: whitesmoke;
+}
+.bttn.bttnl:hover {
   background-color: #454545;
   color: whitesmoke;
   transition-duration: 0.4s;
 }
+.bttn.bttnd:hover {
+  color: black;
+  transition-duration: 0.4s;
+  background-color: whitesmoke;
+}
+.bttn.bttnd {
+  background-color: #454545;
+  color: whitesmoke;
+}
+
 /*
 https://www.flaticon.com/svg/static/icons/svg/107/107753.svg
 https://www.flaticon.com/svg/static/icons/svg/3342/3342254.svg
 */
-#dark {
-  background-image: url( 
-    'https://www.flaticon.com/svg/static/icons/svg/880/880950.svg'); 
+.dark {
                 background-size: cover; 
                 width: 20px; 
                 height: 20px; 
                 font-size: 2rem;
-  border: none;
+                border: none;
 }
 
-#dark:hover {
-  background-image: url( 
-    'https://www.flaticon.com/svg/static/icons/svg/880/880991.svg'); 
+.dark:hover {
                 background-size: cover; 
                 width: 21px; 
                 height: 21px; 
                 font-size: 2rem;
                 transition-duration: 0.1s;
   border: none;
-  background-color: white;
+}
+.dark.darkl {
+  background-image: url( 
+    'https://www.flaticon.com/svg/static/icons/svg/880/880950.svg');
+    background-color: whitesmoke;
+    border: none;
+}
+.dark.darkl:hover {
+  background-image: url( 
+    'https://www.flaticon.com/svg/static/icons/svg/880/880991.svg');
+ background-color: whitesmoke;
+}
+.dark.darkd:hover {
+  background-image: url( 
+    'https://www.flaticon.com/svg/static/icons/svg/880/880950.svg');
+  background-color: black;
+}
+.dark.darkd {
+  background-image: url( 
+    'https://www.flaticon.com/svg/static/icons/svg/880/880991.svg');
+}
+
+
+input[type=text] {
+  font-family: 'Ubuntu Mono';
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid  #ff7f7ff7;
 }
 input[type=text]:focus{
   outline: none;
@@ -98,11 +141,23 @@ input[type=text]:hover{
   border-bottom: 1px solid #63c3f0;
   transition-duration: 1s;
 }
-#readonly {
+.readonly.l {
   color:#09749e;
+   background-color: whitesmoke;
   border: none;
 }
-
+.readonly.d {
+  color:#76D1FF;
+  background-color: #454545;
+  border:none;
+}
+.txtinp.l {
+   background-color: whitesmoke;
+}
+.txtinp.d {
+  background-color:#454545;
+  color:whitesmoke;
+}
 input:focus{
   outline: none;
   border: none;
