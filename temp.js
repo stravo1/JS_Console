@@ -31,7 +31,7 @@ function txt() {
 
 //adds script, prints to 'console'
 const exec = () => {
-    document.getElementById('console').innerHTML+="<font color= rgb(118, 120, 252)>> "+txt()+"</font><br>"; //prints the input to console
+    document.getElementById('console').innerHTML+="<span id='span'>> "+txt()+"</span><br>"; //prints the input to console
 
     var newScript = document.createElement('script');
     newScript.setAttribute("class","nwscrpt")
@@ -56,6 +56,7 @@ const swtch = (arg) => {
         document.getElementById('txtinp').setAttribute('class','txtinp d');
         document.getElementById('bttn').setAttribute('class','bttn bttnd');
         document.getElementById('console').style.setProperty('color', 'whitesmoke');
+        document.getElementById('span').style.setProperty('color','#aec6f5')
         drk = 1;
     } else {
         document.body.setAttribute('id','bodyl');
@@ -65,6 +66,7 @@ const swtch = (arg) => {
         document.getElementById('txtinp').setAttribute('class','txtinp l');
         document.getElementById('bttn').setAttribute('class','bttn bttnl');
         document.getElementById('console').style.setProperty('color', 'black');
+        document.getElementById('span').style.setProperty('color','#2a62c9')
         drk = 0;
     }
     

@@ -85,10 +85,6 @@ header {
   border: 1px solid whitesmoke;
 }
 
-/*
-https://www.flaticon.com/svg/static/icons/svg/107/107753.svg
-https://www.flaticon.com/svg/static/icons/svg/3342/3342254.svg
-*/
 .dark {
   background-size: cover; 
   width: 20px; 
@@ -174,4 +170,8 @@ input[type=text]:hover{
 input:focus{
   outline: none;
   border: none;
+}
+
+#span {
+  color:#2a62c9
 }
