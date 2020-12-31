@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway|Ubuntu+Mono");
 
-body{
+#bodyl{
   background-color: whitesmoke;
 }
-header{
+#bodyd{
+  background-color: #454545;
+}
+header {
   display: grid;
-  grid-template-columns:55fr 1fr;
+  grid-template-columns:10000fr 1fr;
   align-items: center;
   justify-content: end;
   width:fit-content;
@@ -27,12 +30,10 @@ header{
   font-size: smaller;
   line-height: 1.5;
 }
-#consolel {
+#console{
   color:black;
 }
-#consoled {
-  color: white
-}
+
 #parentDiv {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -53,14 +54,15 @@ header{
 
 
 
-input[type=button] {
+.bttn {
   border: 1px solid #454545;
-  padding: 15px 15px;
   text-align: center;
   font-size: 12px;
   font-family: Raleway;
   cursor: pointer;
   border-radius: 4px;
+
+}
 }
 
 .bttn.bttnl {
@@ -80,6 +82,7 @@ input[type=button] {
 .bttn.bttnd {
   background-color: #454545;
   color: whitesmoke;
+  border: 1px solid whitesmoke;
 }
 
 /*
@@ -87,26 +90,28 @@ https://www.flaticon.com/svg/static/icons/svg/107/107753.svg
 https://www.flaticon.com/svg/static/icons/svg/3342/3342254.svg
 */
 .dark {
-                background-size: cover; 
-                width: 20px; 
-                height: 20px; 
-                font-size: 2rem;
-                border: none;
+  background-size: cover; 
+  width: 20px; 
+  height: 20px; 
+  font-size: 2rem;
+  transition-duration: 0.1s;
+  border: none;
 }
 
 .dark:hover {
-                background-size: cover; 
-                width: 21px; 
-                height: 21px; 
-                font-size: 2rem;
-                transition-duration: 0.1s;
+  background-size: cover; 
+  width: 21px; 
+  height: 21px; 
+  font-size: 2rem;
+  transition-duration: 0.3s;
   border: none;
 }
 .dark.darkl {
   background-image: url( 
     'https://www.flaticon.com/svg/static/icons/svg/880/880950.svg');
     background-color: whitesmoke;
-    border: none;
+    border: none; /*dont knw why jst .dark border didnt work */
+
 }
 .dark.darkl:hover {
   background-image: url( 
@@ -116,11 +121,12 @@ https://www.flaticon.com/svg/static/icons/svg/3342/3342254.svg
 .dark.darkd:hover {
   background-image: url( 
     'https://www.flaticon.com/svg/static/icons/svg/880/880950.svg');
-  background-color: black;
+  background-color: #454545;
 }
 .dark.darkd {
   background-image: url( 
     'https://www.flaticon.com/svg/static/icons/svg/880/880991.svg');
+    background-color: #454545;
 }
 
 
@@ -141,9 +147,16 @@ input[type=text]:hover{
   border-bottom: 1px solid #63c3f0;
   transition-duration: 1s;
 }
+
+.readonly.l:hover {
+  border: none;
+}
 .readonly.l {
   color:#09749e;
    background-color: whitesmoke;
+  border: none;
+}
+.readonly.d:hover {
   border: none;
 }
 .readonly.d {

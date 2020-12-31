@@ -26,7 +26,7 @@ window.console = console;
 
 //ObtainTxtOnInputField
 function txt() {
-    return document.getElementById("txtinp").value;
+    return document.getElementsByClassName("txtinp")[0].value;
 }
 
 //adds script, prints to 'console'
@@ -42,21 +42,33 @@ const exec = () => {
 }
 
 
-document.getElementById("bttn").addEventListener("click", function(){
+document.getElementsByClassName("bttn")[0].addEventListener("click", function(){
    exec(); //click action
 
 })
-
+drk = 0;
 const swtch = (arg) => {
     if (arg === 0) {
-        document.body.style.backgroundColor="#202020"
-        document.getElementById('h1').style.color="#e3e2fff7"
-        document.getElementById('dark').style.backgroundImage="url('https://www.flaticon.com/svg/static/icons/svg/880/880991.svg')"
+        document.body.setAttribute('id','bodyd');
+        document.getElementById('h1').setAttribute('class','h1 h1d');
+        document.getElementById('dark').setAttribute('class','dark darkd');
+        document.getElementById('readonly').setAttribute('class','readonly d');
+        document.getElementById('txtinp').setAttribute('class','txtinp d');
+        document.getElementById('bttn').setAttribute('class','bttn bttnd');
+        document.getElementById('console').style.setProperty('color', 'whitesmoke');
+        drk = 1;
     } else {
-        console.log(100)
+        document.body.setAttribute('id','bodyl');
+        document.getElementById('h1').setAttribute('class','h1 h1l');
+        document.getElementById('dark').setAttribute('class','dark darkl');
+        document.getElementById('readonly').setAttribute('class','readonly l');
+        document.getElementById('txtinp').setAttribute('class','txtinp l');
+        document.getElementById('bttn').setAttribute('class','bttn bttnl');
+        document.getElementById('console').style.setProperty('color', 'black');
+        drk = 0;
     }
     
 }
-document.getElementById('dark').addEventListener("click", function(){
-    swtch()
+document.getElementsByClassName('dark')[0].addEventListener("click", function(){
+    swtch(drk)
 });
