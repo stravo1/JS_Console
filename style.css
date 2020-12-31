@@ -8,7 +8,7 @@
 }
 header {
   display: grid;
-  grid-template-columns:10000fr 1fr;
+  grid-template-columns:509px 30px;
   align-items: center;
   justify-content: end;
   width:fit-content;
@@ -17,10 +17,10 @@ header {
   text-align:center;
   font-family: Raleway;
 }
-.h1.h1l {
+.h1.l {
   color: #837DE9F7;
 }
-.h1.h1d {
+.h1.d {
   color: #e3e2fff7;
 }
 
@@ -65,21 +65,21 @@ header {
 }
 }
 
-.bttn.bttnl {
+.bttn.l {
   color: black;
   background-color: whitesmoke;
 }
-.bttn.bttnl:hover {
+.bttn.l:hover {
   background-color: #454545;
   color: whitesmoke;
   transition-duration: 0.4s;
 }
-.bttn.bttnd:hover {
+.bttn.d:hover {
   color: black;
   transition-duration: 0.4s;
   background-color: whitesmoke;
 }
-.bttn.bttnd {
+.bttn.d {
   background-color: #454545;
   color: whitesmoke;
   border: 1px solid whitesmoke;
@@ -90,36 +90,37 @@ header {
   width: 20px; 
   height: 20px; 
   font-size: 2rem;
-  transition-duration: 0.1s;
+  transition-duration: 1s;
   border: none;
+  border-radius: 100%;
 }
 
 .dark:hover {
   background-size: cover; 
-  width: 21px; 
-  height: 21px; 
+  width: 20px; 
+  height: 20px; 
   font-size: 2rem;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   border: none;
 }
-.dark.darkl {
+.dark.l {
   background-image: url( 
     'https://www.flaticon.com/svg/static/icons/svg/880/880950.svg');
     background-color: whitesmoke;
     border: none; /*dont knw why jst .dark border didnt work */
 
 }
-.dark.darkl:hover {
+.dark.l:hover {
   background-image: url( 
     'https://www.flaticon.com/svg/static/icons/svg/880/880991.svg');
  background-color: whitesmoke;
 }
-.dark.darkd:hover {
+.dark.d:hover {
   background-image: url( 
     'https://www.flaticon.com/svg/static/icons/svg/880/880950.svg');
   background-color: #454545;
 }
-.dark.darkd {
+.dark.d {
   background-image: url( 
     'https://www.flaticon.com/svg/static/icons/svg/880/880991.svg');
     background-color: #454545;
@@ -171,7 +172,6 @@ input:focus{
   outline: none;
   border: none;
 }
-
-#span {
+.span {
   color:#2a62c9
 }
