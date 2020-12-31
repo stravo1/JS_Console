@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Ubuntu+Mono");
+
+body{
+  background-color: whitesmoke;
+}
+header{
+  display: grid;
+  grid-template-columns:55fr 1fr;
+  align-items: center;
+  justify-content: end;
+  width:fit-content;
+}
+#h1 {
+  color: #837DE9F7;
+  text-align:center;
+  font-family: Raleway;
+}
+.div {
+  font-family: 'Ubuntu Mono';
+  font-size: smaller;
+  line-height: 1.5;
+}
+#parentDiv {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+#grid1 {
+  display: grid;
+  grid-template-columns: 0.3fr 10fr;
+  grid-template-rows: 10fr 1fr;
+  grid-gap: 0px;
+}
+#grid2 {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  grid-template-rows: 10fr 1fr;
+  grid-gap: 0px;
+}
+
+input[type=text] {
+  background-color: whitesmoke;
+  font-family: 'Ubuntu Mono';
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid  #ff7f7ff7;
+}
+
+input[type=button] {
+  border: 1px solid #454545;
+  color: black;
+  background-color: whitesmoke;
+  padding: 15px 15px
+  text-align: center;
+  font-size: 16px;
+  font-family: Raleway;
+  cursor: pointer;
+  border-radius: 4px;
+}
+input[type=button]:hover {
+  background-color: #454545;
+  color: whitesmoke;
+  transition-duration: 0.4s;
+}
+/*
+https://www.flaticon.com/svg/static/icons/svg/107/107753.svg
+https://www.flaticon.com/svg/static/icons/svg/3342/3342254.svg
+*/
+#dark {
+  background-image: url( 
+    'https://www.flaticon.com/svg/static/icons/svg/880/880950.svg'); 
+                background-size: cover; 
+                width: 20px; 
+                height: 20px; 
+                font-size: 2rem;
+  border: none;
+}
+
+#dark:hover {
+  background-image: url( 
+    'https://www.flaticon.com/svg/static/icons/svg/880/880991.svg'); 
+                background-size: cover; 
+                width: 21px; 
+                height: 21px; 
+                font-size: 2rem;
+                transition-duration: 0.1s;
+  border: none;
+  background-color: white;
+}
+input[type=text]:focus{
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #63c3f0;
+}
+input[type=text]:hover{
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #63c3f0;
+  transition-duration: 1s;
+}
+#readonly {
+  color:#09749e;
+  border: none;
+}
+
+input:focus{
+  outline: none;
+  border: none;
+}
