@@ -1,29 +1,35 @@
-
+const automate = (...args) => {
+    let out = ""
+    for (var i = 0; i < args.length; i++) {
+        out+= " "+args[i]
+    }
+    document.getElementById('console').innerHTML+="<- "+out+"<br>"
+}
 // define a new console
 var consolen=(function(oldCons){ //*n
     return {
-        log: function(text){
-            oldCons.log(text);
-            document.getElementById('console').innerHTML+="<- "+text+"<br>"
+        log: function(...text){
+            oldCons.log(...text);
+            automate(...text)
         },
-        info: function (text) {
-            oldCons.info(text);
-            document.getElementById('console').innerHTML+=text+"<br>"
+        info: function(...text){
+            oldCons.info(...text);
+            automate(...text)
         },
-        warn: function (text) {
-            oldCons.warn(text);
-            document.getElementById('console').innerHTML+=text+"<br>"
+        warn: function(...text){
+            oldCons.warn(...text);
+            automate(...text)
         },
-        error: function (text) {
-            oldCons.error(text);
-            document.getElementById('console').innerHTML+=text+"<br>"
+        error: function(...text){
+            oldCons.error(...text);
+            automate(...text)
         },
        old: {
-         log: (text) => {
+         log: (...text) => {
            undefined
          },
-         info: (text) => {
-           oldCons.info(text);
+         info: (...text) => {
+           oldCons.log(...text);
          }
        }
     };
@@ -64,7 +70,7 @@ const automate0 = (arg) => { //add spans with color depending upon drk state (wa
 
 //automate changing the classes to 'l' or 'd'
 const automate1 = (arg) => {
-    var id = ['h1','dark','readonly','txtinp','bttn','info'];
+    var id = ['h1','dark','readonly','txtinp','bttn','info','abt','txt','warn'];
     var state = ['l','d'];
     for (let i = 0; i < id.length; i++) {
             document.getElementById(id[i]).setAttribute('class',id[i]+" "+state[arg===0 ? 1 : 0]);
@@ -129,9 +135,17 @@ const swtch = (arg) => {
     }
     
 }
-const info = () => {
-  document.getElementById('about').style.setProperty("height",'25%')
-  document.getElementById('about').style.setProperty('width','25%')
+var infs = 0; //initial info state
+const infoBttn = (inf) => { //some cleanup required
+  state= ['35%','0%'];
+  if (inf !== 'click') {
+      document.getElementsByClassName('abt')[0].style.setProperty('height',state[inf]);
+      document.getElementsByClassName('abt')[0].style.setProperty('width',state[inf]);
+      document.getElementsByClassName('abt')[0].style.setProperty('padding',inf === 0 ? '2px 10px' : '0px 0px');
+      inf === 0 ? infs = 1 : infs = 0;
+  } else {
+    infs = 0;
+  }
 }
 
 
@@ -151,5 +165,3 @@ document.getElementsByClassName("txtinp")[0].addEventListener("keyup", function(
 })
 // When the user scrolls the page, execute headerFixed
 window.onscroll = () => {headerFixed()};
-
-document.getElementById('info').onclick = info()

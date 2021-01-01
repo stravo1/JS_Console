@@ -66,8 +66,8 @@ header {
 }
 #infodiv {
   position: fixed;
-  bottom: -4px;
-  right: 5px;
+  bottom: -10px;
+  right: 4px;
   height: 40px;
   width: 40px;
 }
@@ -223,12 +223,42 @@ input:focus{
   padding-top: 102px;
 }
 
-#about {
+.abt {
   position: fixed;
   bottom: 40px;
   right: 10px;
-  height:10%;
-  width:10%;
-  overflow-x: scroll;
-  overflow-y: scroll;
+  height:0%;
+  width:0%;
+  overflow-x: auto;
+  overflow-y: auto;
+  transition-duration: 0.5s;
+  border-radius: 5px;
+}
+.abt.l {
+  background-color: #a7a7a793;
+}
+.abt.d {
+  background-color: #85858593;
+}
+
+h4, .txt, .warn {
+  font-family: Raleway;
+}
+.txt {
+  font-size: smaller;
+}
+.warn {
+  font-size: x-small;
+}
+.txt.l {
+  color: #383838;
+}
+.warn.l {
+  color: #707070ad;
+}
+.txt.d{
+  color: #e4e4e4;
+}
+.warn.d {
+  color: #e0e0e0ad;
 }

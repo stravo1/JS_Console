@@ -37,7 +37,6 @@
 
   <div id="scrptHere"></div>
 
-<script src="temp.js"></script>
 <script>
   const setSize = () => {
     document.getElementById('grid1').style.setProperty('grid-template-columns',"10px "+JSON.stringify(window.innerWidth - 30)+"px")
@@ -47,13 +46,14 @@
   window.addEventListener('load', setSize);
   window.addEventListener('resize', setSize);
   </script>
-  <div class = "div" id = "infodiv">
-    <input type = "button" id = "info" class = "info l">
+  <div class = "div" id = "infodiv" >
+    <input type = "button" id = "info" class = "info l" onmouseover="infoBttn(infs=0)" onmouseleave='infoBttn(infs)' onclick="infoBttn('click')" onblur="infoBttn(infs=1)"> <!-- Some clever things are done here-->
   </div>
-  <div id = 'about'>
-    <h4>WebBased JavaScript Console</h4>
-    <p id = 'txt'>Welcome! This console is for those who would like to have a quick lookup on some JavaScript code but do not have access to any developer friendly web browser, or for those awesome peoele who are learning JavaScript on a mobile device and would like to test their lessons immediately</p>
-    <p id = "warn">Note: This is not a proper console and is not suitable for debugging.</p>
+  <div class = 'abt l' id = "abt">
+    <h4>WebBased JavaScript Console(beta)</h4>
+    <p class = 'txt' id = 'txt'>Welcome! This console is for those who would like to have a quick lookup on some JavaScript code but do not have access to any developer friendly web browser, or for those awesome peoele who are learning JavaScript on a mobile device and would like to test their lessons immediately</p>
+    <p class = "warn" id = 'warn'>Note: This is not a proper console and is not suitable for debugging.</p>
   </div>
+  <script src="temp.js"></script> <!-- Fix the cant find abt bug-->
 </body>
 </html>
