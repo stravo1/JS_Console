@@ -11,12 +11,12 @@
     <link rel="preload" href="assets/info.svg" as="image">
     <link rel="preload" href="assets/info2.svg" as="image">
 </head>
-<body id = 'bodyl'>
+<body id = 'bodyd'>
 
 <header class="header" id = "header">
-  <h1 class="h1 l" id ="h1">JS Console</h1>
+  <h1 class="h1 d" id ="h1">JS Console</h1>
   <div class="div" id="drkgrid">
-  <input type="button" title="Night/Dark Mode Switch" class='dark l' id = 'dark'>
+  <input type="button" title="Night/Dark Mode Switch" class='dark d' id = 'dark'>
   </div>
 </header>
 
@@ -24,14 +24,14 @@
 
   <div class="div" id="parentDiv">
     <div class="div" id="grid1">
-      <input type="text" value="> " class="readonly l" id ='readonly' readonly>
-      <input type="text" class="txtinp l" id='txtinp'>
+      <input type="text" value="> " class="readonly d" id ='readonly' readonly>
+      <input type="text" class="txtinp d" id='txtinp'>
     </div>
     
     <div class="div" id="grid2">
       <div><!-- Blank --></div>
       <div class="div" id = "btngrid">
-      <input type="button" value=">>" class="bttn l" title="Click or Press [Enter] to execute" id = 'bttn'>
+      <input type="button" value=">>" class="bttn d" title="Click or Press [Enter] to execute" id = 'bttn'>
       </div>
     </div>
   </div>
@@ -49,12 +49,12 @@
   window.addEventListener('resize', setSize);
   </script>
   <div class = "div" id = "infodiv" >
-    <input type = "button" id = "info" class = "info l" onmouseover="infoBttn(infs=0)" onmouseleave='infoBttn(infs)' onclick="infoBttn('click')" onblur="infoBttn(infs=1)"> <!-- Some clever things are done here-->
+    <input type = "button" id = "info" class = "info d" onmouseover="infoBttn(infs=0)" onmouseleave='infoBttn(infs)' onclick="infoBttn('click')" onblur="infoBttn(infs=1)"> <!-- Some clever things are done here-->
   </div>
-  <div class = 'abt l' id = "abt">
+  <div class = 'abt d' id = "abt">
     <h4>WebBased JavaScript Console(beta)</h4>
-    <p class = 'txt' id = 'txt'>Welcome! This console is for those who would like to have a quick lookup on some JavaScript code but do not have access to any developer friendly web browser, or for those awesome peoele who are learning JavaScript on a mobile device and would like to test their lessons immediately</p>
-    <p class = "warn" id = 'warn'>Note: This is not a proper console and is not suitable for debugging.</p>
+    <p class = 'txt d' id = 'txt'>Welcome! This console is for those who would like to have a quick lookup on some JavaScript code but do not have access to any developer friendly web browser, or for those awesome peoele who are learning JavaScript on a mobile device and would like to test their lessons immediately</p>
+    <p class = "warn d" id = 'warn'>Note: This is not a proper console and is not suitable for debugging.</p>
   </div>
   <script src="temp.js"></script> <!-- Fix the cant find abt bug-->
 </body>

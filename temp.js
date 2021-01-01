@@ -39,7 +39,7 @@ var consolen=(function(oldCons){ //*n
 window.console = consolen;
 
 
-drk = 0; // initially in day mode
+drk = 1; // by default dark mode
 
 //ObtainTxtOnInputField
 function txt() {
