@@ -8,7 +8,6 @@
 }
 header {
   display: grid;
-  grid-template-columns:509px 30px;
   align-items: center;
   justify-content: end;
   width:fit-content;
@@ -36,20 +35,17 @@ header {
 
 #parentDiv {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
+  grid-template-rows: 1fr 1.5fr;
+  grid-gap: 15px;
+  padding: 0 0;
 }
 #grid1 {
   display: grid;
-  grid-template-columns: 0.3fr 10fr;
-  grid-template-rows: 10fr 1fr;
   grid-gap: 0px;
 }
 #grid2 {
   display: grid;
-  grid-template-columns: 10fr 1fr;
-  grid-template-rows: 10fr 1fr;
-  grid-gap: 0px;
+  grid-gap: 10px;
 }
 
 
@@ -90,7 +86,7 @@ header {
   width: 20px; 
   height: 20px; 
   font-size: 2rem;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   border: none;
   border-radius: 100%;
 }
@@ -175,3 +171,15 @@ input:focus{
 .span {
   color:#2a62c9
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + #console {
+  padding-top: 10px;
+}
+

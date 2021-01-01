@@ -33,8 +33,9 @@
 <script src="temp.js"></script>
 <script>
   const setSize = () => {
-    document.getElementById('grid1').style.setProperty('grid-template-columns',"10px "+JSON.stringify(window.innerWidth/1.6 - 10/1.6)+"px")   
-    document.getElementById('header').style.setProperty('grid-template-columns',JSON.stringify(window.innerWidth/1.6 - 40/1.6)+"px 24px")
+    document.getElementById('grid1').style.setProperty('grid-template-columns',"10px "+JSON.stringify(window.innerWidth - 30)+"px")
+    document.getElementById('grid2').style.setProperty('grid-template-columns', JSON.stringify(window.innerWidth - 60)+"px 40px")   
+    document.getElementById('header').style.setProperty('grid-template-columns',JSON.stringify(window.innerWidth - 50)+"px 30px")
   }
   window.addEventListener('load', setSize);
   window.addEventListener('resize', setSize);
