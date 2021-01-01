@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway|Ubuntu+Mono");
-
+/*downloaded the svgs cause using urls was 'buggy'*/
 #bodyl{
   background-color: whitesmoke;
 }
@@ -100,24 +100,24 @@ header {
 }
 .dark.l {
   background-image: url( 
-    'https://www.flaticon.com/svg/static/icons/svg/880/880950.svg');
+    'assets/day.svg');
     background-color: whitesmoke;
     border: none; /*dont knw why jst .dark border didnt work */
 
 }
 .dark.l:hover {
   background-image: url( 
-    'https://www.flaticon.com/svg/static/icons/svg/880/880991.svg');
+    'assets/night.svg');
  background-color: whitesmoke;
 }
 .dark.d:hover {
   background-image: url( 
-    'https://www.flaticon.com/svg/static/icons/svg/880/880950.svg');
+    'assets/day.svg');
   background-color: #454545;
 }
 .dark.d {
   background-image: url( 
-    'https://www.flaticon.com/svg/static/icons/svg/880/880991.svg');
+    'assets/night.svg');
     background-color: #454545;
 }
 
