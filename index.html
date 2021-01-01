@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preload" href="assets/night.svg" as="image">
     <link rel="preload" href="assets/day.svg" as="image">
-
+</head>
 <body id = 'bodyl'>
 
 <header class="header" id = "header">
@@ -25,6 +25,7 @@
       <input type="text" value="> " class="readonly l" id ='readonly' readonly>
       <input type="text" class="txtinp l" id='txtinp'>
     </div>
+    
     <div class="div" id="grid2">
       <div><!-- Blank --></div>
       <div class="div" id = "btngrid">
@@ -46,6 +47,13 @@
   window.addEventListener('load', setSize);
   window.addEventListener('resize', setSize);
   </script>
-</head>
+  <div class = "div" id = "infodiv">
+    <input type = "button" id = "info" class = "info l">
+  </div>
+  <div id = 'about'>
+    <h4>WebBased JavaScript Console</h4>
+    <p id = 'txt'>Welcome! This console is for those who would like to have a quick lookup on some JavaScript code but do not have access to any developer friendly web browser, or for those awesome peoele who are learning JavaScript on a mobile device and would like to test their lessons immediately</p>
+    <p id = "warn">Note: This is not a proper console and is not suitable for debugging.</p>
+  </div>
 </body>
 </html>

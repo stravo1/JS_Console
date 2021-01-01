@@ -64,7 +64,7 @@ const automate0 = (arg) => { //add spans with color depending upon drk state (wa
 
 //automate changing the classes to 'l' or 'd'
 const automate1 = (arg) => {
-    var id = ['h1','dark','readonly','txtinp','bttn'];
+    var id = ['h1','dark','readonly','txtinp','bttn','info'];
     var state = ['l','d'];
     for (let i = 0; i < id.length; i++) {
             document.getElementById(id[i]).setAttribute('class',id[i]+" "+state[arg===0 ? 1 : 0]);
@@ -129,6 +129,10 @@ const swtch = (arg) => {
     }
     
 }
+const info = () => {
+  document.getElementById('about').style.setProperty("height",'25%')
+  document.getElementById('about').style.setProperty('width','25%')
+}
 
 
 //ALL ACTIONS:
@@ -147,3 +151,5 @@ document.getElementsByClassName("txtinp")[0].addEventListener("keyup", function(
 })
 // When the user scrolls the page, execute headerFixed
 window.onscroll = () => {headerFixed()};
+
+document.getElementById('info').onclick = info()

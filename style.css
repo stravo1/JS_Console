@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway|Ubuntu+Mono");
 /*downloaded the svgs cause using urls was 'buggy'*/
-body{
-  margin-right: 10px;
+html,body {
+  padding: 0;
+}
+body {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 #bodyl{
   background-color: whitesmoke;
@@ -16,9 +20,9 @@ header {
   width:fit-content;
 }
 .h1 {
-  text-align:center;
+  text-align: center;
   font-family: Raleway;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 .h1.l {
   color: #837DE9F7;
@@ -60,7 +64,13 @@ header {
   width: 40px;
   padding-top: 20px;
 }
-
+#infodiv {
+  position: fixed;
+  bottom: -4px;
+  right: 5px;
+  height: 40px;
+  width: 40px;
+}
 
 .bttn {
   border: 1px solid #454545;
@@ -133,7 +143,26 @@ header {
     'assets/night.svg');
     background-color: #454545;
 }
-
+.info {
+  background-size: cover; 
+  width: 20px; 
+  height: 20px; 
+  font-size: 2rem;
+  transition-duration: 0.5s;
+  border: none;
+  border-radius: 100%;
+  background-image: url(assets/info.svg);
+}
+.info:hover {
+  background-image: url(assets/info2.svg);
+  transition-duration:0.4s;
+}
+.info.l{
+  background-color: whitesmoke;
+}
+.info.d {
+  background-color:#454545;
+}
 
 input[type=text] {
   font-family: 'Ubuntu Mono';
@@ -194,3 +223,12 @@ input:focus{
   padding-top: 102px;
 }
 
+#about {
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  height:10%;
+  width:10%;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
