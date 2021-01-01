@@ -17,7 +17,15 @@ var console=(function(oldCons){
         error: function (text) {
             oldCons.error(text);
             document.getElementById('console').innerHTML+=text+"<br>"
-        }
+        },
+       old: {
+         log: (text) => {
+           oldCons.log(text);
+         },
+         info: (text) => {
+           oldCons.info(text);
+         }
+       }
     };
 }(window.console));
 
@@ -44,10 +52,12 @@ const scrpt_exec = () => {
 }
 const cnsole_final = () => { //click action
     try {
-        let tmp = eval(txt()); //for args ;ike just  the name of a var or '2+3' etc
+        //window.console = console.old;
+        let tmp = eval(txt()) ; //for args ;ike just  the name of a var or '2+3' etc
+        //eval has to be used bwith old console.log()
+        window.console = console;
         if (tmp == undefined) {
             scrpt_exec();
-            console.log("if")
         } else {
             document.getElementById('console').innerHTML+="<span class='span'>> "+txt()+"</span><br>";
             console.log(tmp)
