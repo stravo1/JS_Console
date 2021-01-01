@@ -143,6 +143,8 @@ const infoBttn = (inf) => { //some cleanup required
       document.getElementsByClassName('abt')[0].style.setProperty('width',state[inf]);
       document.getElementsByClassName('abt')[0].style.setProperty('padding',inf === 0 ? '2px 10px' : '0px 0px');
       inf === 0 ? infs = 1 : infs = 0;
+      document.querySelector('#abt').scrollLeft = 0;
+      document.querySelector('#abt').scrollTop = 0;
   } else {
     infs = 0;
   }
