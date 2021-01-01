@@ -135,12 +135,12 @@ header {
 }
 .dark.d:hover {
   background-image: url( 
-    'assets/day.svg');
+    'assets/night_d.svg');
   background-color: #454545;
 }
 .dark.d {
   background-image: url( 
-    'assets/night.svg');
+    'assets/day_d.svg');
     background-color: #454545;
 }
 .info {
@@ -162,6 +162,11 @@ header {
 }
 .info.d {
   background-color:#454545;
+  background-image: url(assets/info_d.svg);
+}
+.info.d:hover {
+  background-color:#454545;
+  background-image: url(assets/info2_d.svg);
 }
 
 input[type=text] {
