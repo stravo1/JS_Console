@@ -3,7 +3,7 @@ const objLogger = (arg) => {
   var out = 'Object {'
   for (var i = 0; i < keys.length; i++) {
     out += keys[i]+":";
-    (typeof(arg[keys[i]]) != 'object')&&(typeof(arg[keys[i]]) != 'function') ? out+=JSON.stringify(arg[keys[i]]) : typeof(arg[keys[i]]) == 'function' ? out += 'f' : out += '{...}';
+    (typeof(arg[keys[i]]) != 'object')&&(typeof(arg[keys[i]]) != 'function') ? out+=JSON.stringify(arg[keys[i]]) : typeof(arg[keys[i]]) == 'function' ? out += '<i>f</i>' : out += '{...}';
       i != keys.length-1 ? out+= ", " : out+=''
   }
   out += "}"
