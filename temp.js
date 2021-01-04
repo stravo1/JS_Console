@@ -138,7 +138,7 @@ const cnsole_final = () => { //exec bttn click action
     } catch(err) {
         window.console = consolen;
         automate0(drk)
-        console.log(String(err));
+        console.log(err);
     }
         document.getElementById('txtinp').value= ""; //clear the cmnd line after each exec
 }
