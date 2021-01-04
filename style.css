@@ -51,6 +51,9 @@ body {
 #console{
   color:whitesmoke;
 }
+#console:hover{
+  
+}
 
 #parentDiv {
   display: grid;
@@ -225,10 +228,10 @@ input:focus{
   outline: none;
   border: none;
 }
-.span {
-  color:#2a62c9
+span {
+  color:#2a62c9;
+  overflow-x: scroll;
 }
-
 .sticky {
   position: fixed;
   top: 0;

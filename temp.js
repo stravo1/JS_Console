@@ -1,6 +1,8 @@
+var scpt = "<script type='text/plain' style ='display: block'>" //stackoverflow
 const objLogger = (arg) => {
   if (String(arg).indexOf('[object HTML') != -1) {
-    return "<xmp>" + String(arg.outerHTML) + "</xmp>"
+    var out = scpt+arg.outerHTML+"</script>";
+    return out;
   }
   var keys = Object.getOwnPropertyNames(arg);
   var out = 'Object {'
@@ -10,7 +12,7 @@ const objLogger = (arg) => {
       i != keys.length-1 ? out+= ", " : out+=''
   }
   out += "}"
-  return out
+  return out;
 } //for console.logs of objects
 
 
