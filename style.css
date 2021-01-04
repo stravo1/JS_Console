@@ -16,6 +16,10 @@ body {
 #bodyd{
   background-color: #454545;
 }
+textarea {
+  white-space: nowrap;
+  
+}
 .header {
   display: grid;
   align-items: center;

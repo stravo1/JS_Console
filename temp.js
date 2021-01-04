@@ -1,4 +1,7 @@
 const objLogger = (arg) => {
+  if (String(arg).indexOf('[object HTML') != -1) {
+    return "<xmp>" + String(arg.outerHTML) + "</xmp>"
+  }
   var keys = Object.getOwnPropertyNames(arg);
   var out = 'Object {'
   for (var i = 0; i < keys.length; i++) {
@@ -133,12 +136,12 @@ const cnsole_final = () => { //exec bttn click action
             scrpt_exec();
         } else {
             automate0(drk)
-            console.log(tmp)
+            console.log(tmp);
         }
     } catch(err) {
         window.console = consolen;
         automate0(drk)
-        console.log(err);
+        console.log(String(err));
     }
         document.getElementById('txtinp').value= ""; //clear the cmnd line after each exec
 }
