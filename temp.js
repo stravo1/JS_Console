@@ -1,4 +1,7 @@
 const objLogger = (arg) => {
+  if (String(arg).indexOf('[object HTML') != -1) {
+    return "<xmp>" + String(arg.outerHTML) + "</xmp>"
+  }
   var keys = Object.getOwnPropertyNames(arg);
   var out = 'Object {'
   for (var i = 0; i < keys.length; i++) {
