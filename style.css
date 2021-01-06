@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway|Ubuntu+Mono");
 /*downloaded the svgs cause using urls was 'buggy'*/
 * {
-  transition-duration: 0.3s;
+  transition-duration: 0.35s;
 }
 html,body {
   padding: 0;
