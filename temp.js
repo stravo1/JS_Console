@@ -115,9 +115,6 @@ const automate2 = (arg) => {
 
 //adds script, prints to 'console'
 const scrpt_exec = () => {
-    //window.consolen = console;
-   automate0(drk); //prints the input to console
-   //dynamically adding span doesnt effect if attributes rare changed later COS YOU WERE FXCKING USIND 1ID FORALL SPANS
     var newScript = document.createElement('script');
     newScript.setAttribute("class","nwscrpt");
     var inlineScript = document.createTextNode(txt());
@@ -129,21 +126,19 @@ const scrpt_exec = () => {
 
 
 const cnsole_final = () => { //exec bttn click action
+    automate0(drk); //prints the input to console
     try {
-        window.console = consolen.old;
-        let tmp = eval(txt()) ; //for args ;ike just  the name of a var or '2+3' etc
-        //eval has to be used bwith old console.log()
-        window.console = consolen;
-        if (tmp == undefined) {
-            scrpt_exec();
-        } else {
-            automate0(drk)
-            console.log(tmp)
-        }
+        //window.console = consolen.old;
+        consolen.old.info('try')
+        let tmp = eval('console.log('+txt()+')') ; //for args ;ike just  the name of a var or '2+3' etc
     } catch(err) {
-        window.console = consolen;
-        automate0(drk)
-        console.log(err);
+        if (err.name == 'SyntaxError') {
+          consolen.old.info('if')
+          scrpt_exec();
+        } else {
+          consolen.old.info('else')
+          console.log(err)
+        }
     }
         document.getElementById('txtinp').value= ""; //clear the cmnd line after each exec
 }
