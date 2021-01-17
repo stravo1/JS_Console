@@ -1,14 +1,13 @@
-var scpt = "<script type='text/plain' style ='display: block'>" //stackoverflow
 const objLogger = (arg) => {
   if (String(arg).indexOf('[object HTML') != -1) {
-    var out = scpt+arg.outerHTML+"</script>";
+    var out = "<script type='text/plain' style ='display: block'>"+arg.outerHTML+"</script>";
     return out;
   }
   var keys = Object.getOwnPropertyNames(arg);
   var out = 'Object {'
   for (var i = 0; i < keys.length; i++) {
     out += keys[i]+":";
-    (typeof(arg[keys[i]]) != 'object')&&(typeof(arg[keys[i]]) != 'function') ? out+=JSON.stringify(arg[keys[i]]) : typeof(arg[keys[i]]) == 'function' ? out += '<i>f</i>' : out += '{...}';
+    (typeof(arg[keys[i]]) != 'object')&&(typeof(arg[keys[i]]) != 'function') ? out+=String(arg[keys[i]]) : typeof(arg[keys[i]]) == 'function' ? out += '<i>f</i>' : out += '{...}';
       i != keys.length-1 ? out+= ", " : out+=''
   }
   out += "}"
@@ -18,43 +17,44 @@ const objLogger = (arg) => {
 
 
 
-const automate = (...args) => {
+const consoleLogMultiple = (...args) => {
     let outp = ""
     
-    for (var j = 0; j < args.length; j++) { //stackovrflw
+    for (var j = 0; j < args.length; j++) {
       if (typeof args[j] == 'object') {
         outp += objLogger(args[j]);
     } else {
       outp += " " + args[j]
     }
     document.getElementById('console').innerHTML+="<- "+outp+"<br>"
-    }
-}
+    } //for logging 'console.log' to 'console' (supports multiple args. jst like oldCons)
+} //used below
+
 // define a new console
 var consolen=(function(oldCons){ //*n
     return {
         log: function(...text){
             oldCons.log(...text);
-            automate(...text)
+            consoleLogMultiple(...text)
         },
         info: function(...text){
             oldCons.info(...text);
-            automate(...text)
+            consoleLogMultiple(...text)
         },
         warn: function(...text){
             oldCons.warn(...text);
-            automate(...text)
+            consoleLogMultiple(...text)
         },
         error: function(...text){
             oldCons.error(...text);
-            automate(...text)
+            consoleLogMultiple(...text)
         },
        old: {
          log: (...text) => {
-           undefined
+           oldCons.log(...text)
          },
          info: (...text) => {
-           oldCons.log(...text);
+           oldCons.info(...text);
          }
        }
     };
@@ -87,21 +87,22 @@ function headerFixed() {
 
 
 
-const automate0 = (arg) => { //add spans with color depending upon drk state (was a bug)
+const consoleInput = (arg) => { //add spans with color depending upon drk state (was a bug)
     var color = ['#2a62c9','#aec6f5']
     document.getElementById('console').innerHTML+="<span style='color : "+color[arg]+"'>> "+txt()+"</span><br>";
-}
+} //for logging user inputs
 
 
 //automate changing the classes to 'l' or 'd'
-const automate1 = (arg) => {
+const themeChange1 = (arg) => {
     var id = ['h1','dark','readonly','txtinp','bttn','info','abt','txt','warn','header'];
     var state = ['l','d'];
     for (let i = 0; i < id.length; i++) {
             document.getElementById(id[i]).setAttribute('class',id[i]+" "+state[arg===0 ? 1 : 0]);
         }
-}
-const automate2 = (arg) => {
+} //changes the dark/day mode
+
+const themeChange2 = (arg) => {
     var state = [['whitesmoke','#aec6f5'],['black','#2a62c9']];
 
     document.getElementById('console').style.setProperty('color',state[arg][0]);
@@ -111,9 +112,8 @@ const automate2 = (arg) => {
     for (var i = 0; i < id.length; i++){
         id[i].style.setProperty('color',state[arg][1])
     }
-}
+} //simliar to themeChange1 but for the console and the spans
 
-//adds script, prints to 'console'
 const scrpt_exec = () => {
     var newScript = document.createElement('script');
     newScript.setAttribute("class","nwscrpt");
@@ -121,12 +121,12 @@ const scrpt_exec = () => {
     var div = document.getElementById('scrptHere');
     newScript.appendChild(inlineScript);
     div.appendChild(newScript); //adds script
-}
+} //main function: adds and executes the 'commamd'
 
 
 
 const cnsole_final = () => { //exec bttn click action
-    automate0(drk); //prints the input to console
+    consoleInput(drk); //prints the input to console
     try {
         //window.console = consolen.old;
         consolen.old.info('try')
@@ -145,12 +145,12 @@ const cnsole_final = () => { //exec bttn click action
 //dark mode switch click func.
 const swtch = (arg) => {
     if (arg === 0) {
-        automate1(arg);
-        automate2(arg);
+        themeChange1(arg);
+        themeChange2(arg);
         drk = 1;
     } else {
-        automate1(arg);
-        automate2(arg);
+        themeChange1(arg);
+        themeChange2(arg);
         drk = 0;
     }
     
