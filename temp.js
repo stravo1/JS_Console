@@ -128,16 +128,12 @@ const scrpt_exec = () => {
 const cnsole_final = () => { //exec bttn click action
     consoleInput(drk); //prints the input to console
     try {
-        //window.console = consolen.old;
-        consolen.old.info('try')
         let tmp = eval('console.log('+txt()+')') ; //for args ;ike just  the name of a var or '2+3' etc
     } catch(err) {
         if (err.name == 'SyntaxError') {
-          consolen.old.info('if')
           scrpt_exec();
         } else {
-          consolen.old.info('else')
-          console.log(err)
+          console.log(String(err))
         }
     }
         document.getElementById('txtinp').value= ""; //clear the cmnd line after each exec
